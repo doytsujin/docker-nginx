@@ -1,4 +1,4 @@
-FROM ryanwclark/debian:buster
+FROM ryanwclark/debian:buster-slim
 LABEL maintainer="Ryan Clark (ryanwclark@yahoo.com)"
 
 ### Set Nginx Version Number

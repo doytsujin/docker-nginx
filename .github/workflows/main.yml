@@ -1280,9 +1280,9 @@ jobs:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
 
-  debian-buster:
+  debian-buster-slim:
     env:
-      RELEASE: buster
+      RELEASE: buster-slim
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -1387,9 +1387,9 @@ jobs:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
 
-  debian-stretch:
+  debian-stretch-slim:
     env:
-      RELEASE: stretch
+      RELEASE: stretch-slim
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -1482,7 +1482,7 @@ jobs:
       - name: Switch
         id: Switch
         run: |
-          sed -i "s|FROM ryanwclark/debian:.*|FROM ryanwclark/debian:stretch|g" Dockerfile.debian
+          sed -i "s|FROM ryanwclark/debian:.*|FROM ryanwclark/debian:stretch-slim|g" Dockerfile.debian
 
       - name: Build
         uses: docker/build-push-action@v2
@@ -1494,9 +1494,9 @@ jobs:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
 
-  debian-jessie:
+  debian-jessie-slim:
     env:
-      RELEASE: jessie
+      RELEASE: jessie-slim
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
