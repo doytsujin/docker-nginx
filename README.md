@@ -1,7 +1,7 @@
 # github.com/ryanwclark/docker-nginx
 
 
-[![GitHub release](https://img.shields.io/github/v/tag/ryanwclark/docker-nginx?style=flat-square)](https://github.com/ryanwclark/docker-nginx/releases/latest)
+
 [![Build Status](https://img.shields.io/github/workflow/status/ryanwclark/docker-nginx/build?style=flat-square)](https://github.com/ryanwclark/docker-nginx/actions?query=workflow%3Abuild)
 [![Docker Stars](https://img.shields.io/docker/stars/ryanwclark/nginx.svg?style=flat-square&logo=docker)](https://hub.docker.com/ryanwclark/nginx/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/ryanwclark/nginx.svg?style=flat-square&logo=docker)](https://hub.docker.com/ryanwclark/nginx/)
