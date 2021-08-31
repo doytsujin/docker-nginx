@@ -28,7 +28,7 @@ jobs:
 
             case ${BRANCH} in
               "main" | "master" )
-                  BRANCHTAG="${DOCKER_IMAGE}:alpine-3.14,${DOCKER_IMAGE}:alpine-3.14-latest,${DOCKER_IMAGE}:latest"
+                  BRANCHTAG="${DOCKER_IMAGE}:debian-latest,${DOCKER_IMAGE}:debian-latest-latest,${DOCKER_IMAGE}:latest"
                 ;;
               "develop" )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
@@ -48,7 +48,7 @@ jobs:
           fi
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
-               GITTAG="${DOCKER_IMAGE}:alpine-3.14-$(echo $GITHUB_REF | sed 's|refs/tags/||g')"
+               GITTAG="${DOCKER_IMAGE}:debian-latest-$(echo $GITHUB_REF | sed 's|refs/tags/||g')"
           fi
 
           if [ -n "${BRANCHTAG}" ] && [ -n "${GITTAG}" ]; then
