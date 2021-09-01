@@ -114,7 +114,7 @@ RUN set -x && \
     cd /usr/src && \
     git clone https://github.com/kvspb/nginx-auth-ldap /usr/src/nginx-auth-ldap && \
     mkdir -p /usr/src/nginx && \
-    curl -sSL http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz | tar xvfz - --strip 1 -C /usr/src/nginx && \
+    curl -sSL http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz | tar xvfz - --strip=1 -C /usr/src/nginx && \
     cd /usr/src/nginx && \
     ./configure $CONFIG --with-debug && \
     make -j$(getconf _NPROCESSORS_ONLN) && \
